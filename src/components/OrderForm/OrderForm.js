@@ -72,7 +72,7 @@ function OrderForm({addOrder}) {
       />
 
       {ingredientButtons}
-      {fieldsError && <p>Add a name and at least one ingredient before submitting</p>}
+      {fieldsError && <p className='fields-error'>Add a name and at least one ingredient before submitting</p>}
       <p className='order-status'>  Order: {ingredients.length ? ingredients.join(", ") : "Nothing selected"}</p>
 
       <button className='submit-button' name ='submit' onClick={(e) => handleSubmit(e)}>Submit Order</button>
