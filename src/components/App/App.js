@@ -16,8 +16,9 @@ function App() {
   const addOrder = (order) => {
     postOrder(order)
       .then(res => {
-        setOrders([...orders, order])
+        setOrders([...orders, res])
       })
+      .catch(err => alert(err.message))
   }
 
   return (

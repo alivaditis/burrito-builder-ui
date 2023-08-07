@@ -11,4 +11,9 @@ export const postOrder = (order) => {
     },
     body: JSON.stringify(order)
   })
+  .then(res => {
+    if (!res.ok) {
+      throw new Error('unsuccesful post')
+    } else return (res.json())
+  })
 }
