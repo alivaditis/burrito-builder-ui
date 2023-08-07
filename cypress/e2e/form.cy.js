@@ -14,6 +14,8 @@ describe('form', () => {
       .get('.order-status').contains('Order: steak')
       .get('.submit-button').click()
       .get('.App').find('.order').should('have.length', '4')
+      .get('h3').last().contains('Alec')
+      .get('li').last().contains('steak')
   })
 
   it('as a user I should not be able to submit an order if I have not provided a name and at least one ingredient', () => {
@@ -34,5 +36,5 @@ describe('form', () => {
       .get('.submit-button').click()
       .get('.fields-error').should('be.visible').contains('Add a name and at least one ingredient before submitting')
   })
-  
+
 })

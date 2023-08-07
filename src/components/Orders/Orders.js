@@ -3,7 +3,8 @@ import "./Orders.css";
 
 const Orders = ({orders}) => {
   const orderEls = orders.map((order) => {
-    return (
+
+    return (    
       <div key={order.id} className="order">
         <h3>{order.name}</h3>
         <ul className="ingredient-list">
